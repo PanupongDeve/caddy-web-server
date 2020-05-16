@@ -1,5 +1,7 @@
 :80, :443 {
   	reverse_proxy * localhost:3000
-  	gzip
-	log /var/log/caddy.log
+  	encode gzip
+	log {
+		output file /var/log/access.log
+	}
 }
