@@ -1,0 +1,12 @@
+version: "2"
+services: 
+  web_server:
+    build:
+      context: .
+      dockerfile: ./container/webserver.Dockerfile
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+    - ./caddy/.caddy:/root/.caddy
+    - ./caddy/Caddyfile:/etc/Caddyfile
