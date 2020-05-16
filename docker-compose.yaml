@@ -8,5 +8,4 @@ services:
       - 80:80
       - 443:443
     volumes:
-    - ./caddy/.caddy:/root/.caddy
-    - ./caddy/Caddyfile:/etc/Caddyfile
+    - ./caddy/Caddyfile:/etc/caddy/Caddyfile
